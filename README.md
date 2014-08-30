@@ -1,13 +1,7 @@
-DevTips-Starter-Kit (Jekyll Friendly)
+Ben Sebastian's Online Design Portfolio
 ===================
 
-Use this as a simple structure for a simple start to a simple site.
+This is a simple online design portfolio created using Jekyll
 
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=GTBaQ2DcGUk
-" target="_blank">
-Watch the video on YouTube
-<img src="thumbnail.png" 
+<img src="portfolio-preview.jpg" 
 alt="Watch the video on youtube" />
-
-</a>
