@@ -1,6 +1,18 @@
+import type { MouseEvent } from 'react'
 import { navLinks } from '../data/projects'
 import { useActiveSection } from '../hooks/useActiveSection'
 import { EmailIcon, FacebookIcon, GitHubIcon, LinkedInIcon } from './Icons'
+
+function scrollToSection(event: MouseEvent<HTMLAnchorElement>) {
+  const id = event.currentTarget.hash.slice(1)
+  const section = document.getElementById(id)
+
+  if (!section) return
+
+  event.preventDefault()
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  section.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' })
+}
 
 const socials = [
   { href: 'mailto:bsebastian86@gmail.com', label: 'Email', icon: EmailIcon },
@@ -38,19 +50,22 @@ export function Intro() {
           />
           <div>
             <h1>
-              <a href="#about">Ben Sebastian</a>
+              <a href="#about" onClick={scrollToSection}>
+                Ben Sebastian
+              </a>
             </h1>
             <h2>Front End Engineer</h2>
             <p className="intro__place">Manila, Philippines</p>
           </div>
         </div>
-        <p>Passionate front end engineer focused on end-to-end website development.</p>
+        <p>Front end engineer focused on end-to-end website development.</p>
         <nav className="intro__nav" aria-label="Primary">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               className={active === link.href.slice(1) ? 'is-active' : undefined}
+              onClick={scrollToSection}
             >
               <span className="intro__line" aria-hidden="true" />
               {link.label}
