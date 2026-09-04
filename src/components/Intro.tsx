@@ -60,15 +60,17 @@ export function Intro() {
         </div>
         <p>Front end engineer focused on end-to-end website development.</p>
         <nav className="intro__nav" aria-label="Primary">
-          {navLinks.map((link) => (
+          {navLinks.map((link, index) => (
             <a
               key={link.href}
               href={link.href}
               className={active === link.href.slice(1) ? 'is-active' : undefined}
               onClick={scrollToSection}
             >
-              <span className="intro__line" aria-hidden="true" />
-              {link.label}
+              <span className="intro__index" aria-hidden="true">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <span className="intro__label">{link.label}</span>
             </a>
           ))}
         </nav>
