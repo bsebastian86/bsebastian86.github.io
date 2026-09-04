@@ -1,0 +1,33 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Deployed by pushing the built site to master; token lacks workflow scope
+.github/workflows/
+
+# Unused 2014 assets; the old site is on the legacy branch
+public/images/work/
+public/images/thumbnails/
+public/images/header_bg.jpg
+public/images/process_bg.jpg
