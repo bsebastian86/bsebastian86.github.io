@@ -8,8 +8,8 @@ type Speck = {
   life: number
   maxLife: number
   size: number
-  digit: '0' | '1'
   hue: number
+  spark: boolean
 }
 
 export function useSpotlight() {
@@ -48,9 +48,9 @@ export function useSpotlight() {
         vy: moving ? 0.25 + Math.random() * 0.75 : (Math.random() - 0.6) * 0.45,
         life: 1,
         maxLife: moving ? 0.85 + Math.random() * 0.55 : 0.95 + Math.random() * 0.55,
-        size: moving ? 11 + Math.random() * 6 : 9 + Math.random() * 4,
-        digit: Math.random() > 0.5 ? '1' : '0',
-        hue: 204 + Math.random() * 16,
+        size: 0.6 + Math.random() * 1.8,
+        hue: 210 + Math.random() * 30,
+        spark: Math.random() > 0.62,
       })
     }
 
@@ -99,11 +99,22 @@ export function useSpotlight() {
         }
 
         const alpha = Math.max(0, speck.life) * 0.7
-        ctx.font = `600 ${speck.size}px ui-monospace, SFMono-Regular, Menlo, monospace`
-        ctx.textAlign = 'center'
-        ctx.textBaseline = 'middle'
-        ctx.fillStyle = `hsla(${speck.hue}, 92%, 72%, ${alpha})`
-        ctx.fillText(speck.digit, speck.x, speck.y)
+        ctx.beginPath()
+        ctx.arc(speck.x, speck.y, speck.size, 0, Math.PI * 2)
+        ctx.fillStyle = `hsla(${speck.hue}, 80%, ${72 + speck.size * 8}%, ${alpha})`
+        ctx.fill()
+
+        if (speck.spark) {
+          const arm = 1.6 + speck.size * 1.8
+          ctx.strokeStyle = `hsla(${speck.hue}, 90%, 88%, ${alpha * 0.65})`
+          ctx.lineWidth = 0.6
+          ctx.beginPath()
+          ctx.moveTo(speck.x - arm, speck.y)
+          ctx.lineTo(speck.x + arm, speck.y)
+          ctx.moveTo(speck.x, speck.y - arm)
+          ctx.lineTo(speck.x, speck.y + arm)
+          ctx.stroke()
+        }
       }
 
       frame = window.requestAnimationFrame(tick)
