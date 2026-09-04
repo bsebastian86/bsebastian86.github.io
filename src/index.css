@@ -157,10 +157,18 @@ ol {
   }
 }
 
+.stars-field,
 .cursor-field {
   pointer-events: none;
   position: fixed;
   inset: 0;
+}
+
+.stars-field {
+  z-index: 0;
+}
+
+.cursor-field {
   z-index: 30;
 }
 
