@@ -75,20 +75,20 @@ export type FreelanceProject = {
 
 export const freelanceProjects: FreelanceProject[] = [
   {
-    id: 'miguel',
-    title: 'MiguelSebastian.com',
-    href: 'https://miguelsebastian.com',
-    summary:
-      'Actor and model website for Miguel Sebastian — a Sydney-based performer working in film, television, and dramatic theatre, with representation details for Sydney Talent Company.',
-    tags: ['Next.js', 'React'],
-  },
-  {
     id: 'air-quality-support',
     title: 'Air Quality Support',
     href: 'https://airqualitysupport.com.au',
     summary:
       'Marketing site for an Australian air-quality consultancy, covering WRF meteorological datasets, GIS terrain and land-use data, and configured WRF workstations for dispersion modelling.',
     tags: ['Next.js', 'React', 'Sanity'],
+  },
+  {
+    id: 'miguel',
+    title: 'MiguelSebastian.com',
+    href: 'https://miguelsebastian.com',
+    summary:
+      'Actor and model website for Miguel Sebastian — a Sydney-based performer working in film, television, and dramatic theatre, with representation details for Sydney Talent Company.',
+    tags: ['Next.js', 'React'],
   },
   {
     id: 'myuse',
