@@ -23,9 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-# Deployed by pushing the built site to master; token lacks workflow scope
-.github/workflows/
-
 # Unused 2014 assets; the old site is on the legacy branch
 public/images/work/
 public/images/thumbnails/
