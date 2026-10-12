@@ -92,7 +92,7 @@ export const freelanceProjects: FreelanceProject[] = [
   },
   {
     id: 'miguel',
-    title: 'MiguelSebastian.com',
+    title: 'Miguel Sebastian',
     href: 'https://miguelsebastian.com',
     summary:
       'Actor and model website for Miguel Sebastian — a Sydney-based performer working in film, television, and dramatic theatre, with representation details for Sydney Talent Company.',
