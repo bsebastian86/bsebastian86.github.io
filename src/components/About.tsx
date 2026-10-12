@@ -6,8 +6,8 @@ export function About() {
       <h2 className="section__label">About</h2>
       <div className="about">
         <p>
-          Passionate <strong>Front End Web Engineer</strong> with a proven track record in{' '}
-          <strong>PHP</strong> and <strong>ReactJS</strong>, eager to contribute to the team with
+          Passionate <strong>Front End Web Engineer</strong> with a proven track record in PHP
+          and <strong>ReactJS</strong>, eager to contribute to the team with
           comprehensive end-to-end website development expertise.
         </p>
         <p>

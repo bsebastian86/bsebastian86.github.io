@@ -83,6 +83,14 @@ export const freelanceProjects: FreelanceProject[] = [
     tags: ['Next.js', 'React', 'Sanity'],
   },
   {
+    id: 'homage',
+    title: 'Homage',
+    href: 'https://www.homage.sg',
+    summary:
+      'Marketing site for Homage, an on-demand home and community care service, with localized versions for Singapore (homage.sg), Malaysia (homage.com.my), and Australia (homage.com.au).',
+    tags: ['WordPress', 'PHP'],
+  },
+  {
     id: 'miguel',
     title: 'MiguelSebastian.com',
     href: 'https://miguelsebastian.com',
@@ -104,7 +112,7 @@ export const education = {
   school: 'Mapúa IT Center',
   location: 'Makati City',
   year: '2007',
-  degree: 'Accelerated Associate Degree in Multimedia Arts',
+  degree: 'Associate Degree in Multimedia Arts',
   detail:
     'Specialization options in Web Development, Film & Sound Production, Graphic Design & Advertising, or 3D Animation.',
 }
